@@ -59,7 +59,7 @@ def reputacion_urls_virustotal(urls):
     return resultados
 
 def mostrar_resultado_urls(resultados):
-    print(f"{Fore.YELLOW}\n[6] Análisis de URLs encontradas en el correo (cabeceras + cuerpo):{Style.RESET_ALL}")
+    print(f"{Fore.MAGENTA}\n[6] Análisis de URLs encontradas en el correo (cabeceras + cuerpo):{Style.RESET_ALL}")
     if not resultados:
         print(Fore.YELLOW + "No se encontraron URLs.\n" + Style.RESET_ALL)
         return 0
