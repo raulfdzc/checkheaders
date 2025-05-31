@@ -42,7 +42,7 @@ This Python script allows you to **analyze the header and body of an email** dir
 
 - Python 3.7 or higher  
 - Free API Key from [VirusTotal](https://www.virustotal.com/)  
-- Install dependencies:
+- Install all required dependencies listed in the `requirements.txt` file with a single command:
 
 ```bash
 pip install -r requirements.txt
