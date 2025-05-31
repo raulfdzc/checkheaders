@@ -6,15 +6,8 @@ from colorama import init, Fore, Style
 import dns.resolver
 
 init(autoreset=True)
+VT_API_KEY = "TU_API_KEY_VA_AQUI"
 
-# ---------------------------
-# CONFIG
-# ---------------------------
-VT_API_KEY = "c77088ea35ac9e50af74448e715546850d2e4ce3ebb308eb944ed8f12777cbb1"
-
-# ---------------------------
-# FUNCIONES
-# ---------------------------
 def extraer_dominio_desde_header(header):
     match = re.search(r'@([\w\.-]+)', header)
     return match.group(1) if match else None
@@ -130,6 +123,7 @@ def analizar_cabecera_texto(cabecera, cuerpo_texto):
 
     print(f"\n{Fore.MAGENTA}[5]{Style.RESET_ALL} Reputación del dominio (VirusTotal):")
     vt_ok, vt_info = reputacion_dominio_virustotal(dominio)
+    
     if isinstance(vt_info, dict):
         print(f"  {Fore.GREEN}Seguras: {vt_info.get('harmless', 0)}{Style.RESET_ALL}")
         print(f"  {Fore.YELLOW}Sospechosas: {vt_info.get('suspicious', 0)}{Style.RESET_ALL}")
@@ -150,9 +144,7 @@ def analizar_cabecera_texto(cabecera, cuerpo_texto):
     print(Fore.MAGENTA + Style.BRIGHT + f"\n✅ Puntuación de confiabilidad: {puntuacion}/11" + Style.RESET_ALL)
     print(Fore.MAGENTA + Style.BRIGHT + f"🔎 Clasificación: {clasificacion}\n" + Style.RESET_ALL)
 
-# ---------------------------
-# USO
-# ---------------------------
+
 if __name__ == "__main__":
     print(Fore.BLUE + Style.BRIGHT + "📥 Pega todo el correo (cabeceras y cuerpo). Finaliza con Ctrl+D (Linux/macOS) o Ctrl+Z (Windows) y Enter:\n" + Style.RESET_ALL)
     try:
