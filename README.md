@@ -1,48 +1,114 @@
+🛡️ Email Header Analyzer + URL Reputation with VirusTotal
+This Python script allows you to analyze the header and body of an email directly from the terminal, without needing to upload .eml files. Its purpose is to help you assess the trustworthiness of a message by detecting manipulation, missing authentication, domain reputation, and the presence of suspicious URLs.
+
+🚀 How does it work?
+Paste the entire email (header and body) directly into the terminal.
+
+The script automatically detects the separation between header and body.
+
+A full analysis is performed:
+
+Extracts the sender's domain.
+
+Checks for SPF, DKIM, DMARC records.
+
+Analyzes consistency in Received fields.
+
+Queries domain reputation via VirusTotal.
+
+Extracts and analyzes URLs from the email body using VirusTotal.
+
+Calculates a trust score (scale from 0 to 11).
+
+📌 Key Features
+✅ Manual input (no .eml files required).
+
+✅ Verifies domain authenticity: SPF, DKIM, DMARC.
+
+✅ Uses the free VirusTotal API to analyze:
+
+Domain reputation.
+
+Reputation of URLs found in the body.
+
+✅ Visual report with color output.
+
+✅ Final classification of the email: trustworthy, partially trustworthy, or untrustworthy.
+
+📸 Example Output
+
+
+🔧 Requirements
+Python 3.7 or higher
+
+Free API Key from VirusTotal
+
+Install dependencies:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+
+
+
+
+
+You said:
+es en md
+
+
+ChatGPT said:
+Perfecto, aquí tienes el texto en formato Markdown (.md) en inglés:
+
+markdown
+Copy
+Edit
 # checkheaders
 
-# 🛡️ Analizador de Cabeceras de Correo Electrónico + Reputación de URLs con VirusTotal
+# 🛡️ Email Header Analyzer + URL Reputation with VirusTotal
 
-Este script en Python permite **analizar la cabecera y el cuerpo de un correo electrónico** directamente desde la terminal, sin necesidad de subir archivos `.eml`. Su objetivo es ayudarte a evaluar la confiabilidad del mensaje detectando manipulaciones, falta de autenticación, reputación de dominios y presencia de URLs sospechosas.
-
----
-
-## 🚀 ¿Cómo funciona?
-
-1. **Pega todo el correo** (cabecera y cuerpo) directamente en la terminal.
-2. El script **detecta automáticamente** la separación entre cabecera y cuerpo.
-3. Se realiza un análisis completo:
-   - Extracción del dominio del remitente.
-   - Verificación de registros **SPF, DKIM, DMARC**.
-   - Análisis de consistencia en campos `Received`.
-   - Consulta de reputación del dominio en **VirusTotal**.
-   - Extracción y análisis de URLs del cuerpo del correo con **VirusTotal**.
-   - Cálculo de puntuación de confiabilidad (escala 0 a 11).
+This Python script allows you to **analyze the header and body of an email** directly from the terminal, without needing to upload `.eml` files. Its purpose is to help you assess the trustworthiness of a message by detecting manipulation, missing authentication, domain reputation, and the presence of suspicious URLs.
 
 ---
 
-## 📌 Características clave
+## 🚀 How does it work?
 
-- ✅ Entrada manual (no requiere archivos `.eml`).
-- ✅ Verifica autenticidad de dominio: SPF, DKIM, DMARC.
-- ✅ Usa la API gratuita de **VirusTotal** para analizar:
-  - Reputación de dominios.
-  - Reputación de URLs encontradas en el cuerpo.
-- ✅ Reporte visual con colores.
-- ✅ Clasificación final del correo: confiable, parcialmente confiable o no confiable.
-
----
-
-## 📸 Ejemplo de salida
-
-![Ejemplo de análisis](./image.png)
+1. **Paste the entire email** (header and body) directly into the terminal.
+2. The script **automatically detects** the separation between header and body.
+3. A full analysis is performed:
+   - Extracts the sender's domain.
+   - Checks for **SPF, DKIM, DMARC** records.
+   - Analyzes consistency in `Received` fields.
+   - Queries domain reputation via **VirusTotal**.
+   - Extracts and analyzes URLs from the email body using **VirusTotal**.
+   - Calculates a trust score (scale from 0 to 11).
 
 ---
 
-## 🔧 Requisitos
+## 📌 Key Features
 
-- Python 3.7 o superior
-- API Key gratuita de [VirusTotal](https://www.virustotal.com/)
-- Instala las dependencias:
+- ✅ Manual input (no `.eml` files required)
+- ✅ Verifies domain authenticity: SPF, DKIM, DMARC
+- ✅ Uses the free **VirusTotal API** to analyze:
+  - Domain reputation
+  - Reputation of URLs found in the body
+- ✅ Visual report with color output
+- ✅ Final classification of the email: trustworthy, partially trustworthy, or untrustworthy
+
+---
+
+## 📸 Example Output
+
+![Analysis Example](./image.png)
+
+---
+
+## 🔧 Requirements
+
+- Python 3.7 or higher  
+- Free API Key from [VirusTotal](https://www.virustotal.com/)  
+- Install dependencies:
 
 ```bash
 pip install -r requirements.txt
