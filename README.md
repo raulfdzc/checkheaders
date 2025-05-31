@@ -34,7 +34,7 @@ Este script en Python permite **analizar la cabecera y el cuerpo de un correo el
 
 ## 📸 Ejemplo de salida
 
-![Ejemplo de análisis](./ejemplo_resultado.png)
+![Ejemplo de análisis](./image.png)
 
 ---
 
